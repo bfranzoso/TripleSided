@@ -5,3 +5,8 @@ exclude: ["node_modules",
   "package.json",
   "preview.jpg",
   "README.md"]
+
+url: "http://www.triple-sided.com"
+permalink: /:categories/:title/
+
+# Files

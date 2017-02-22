@@ -15,6 +15,12 @@ html, body
   animation: fadein 1s
   background: #fff
 
+a
+  color: #BB69FF
+  outline: none
+  text-decoration: none
+  transition: color 0.2s ease-in-out
+
 .home
   background: #F7F7F7
 
@@ -59,3 +65,26 @@ html, body
 
 .container.no-padding
   padding: 0
+
+.gradient-bar
+  background-color: #409CF9
+  background-image: linear-gradient(to left, #409CF9, #37F6E0)
+  clear: both
+  height: 8px
+  width: 100%
+
+
+@media only screen and (min-width: 769px)
+ .gradient-bar
+    height: 10px
+
+
+
+.gradient-bar.theme-purple
+  background-color: #BB69FF
+  background-image: linear-gradient(to right, #BB69FF, #4B88FA)
+
+.gradient-bar.theme-green
+  background-color: #21EFC7
+  background-image: -webkit-linear-gradient(right, #21EFC7, #AFFFA9)
+  background-image: linear-gradient(to left, #21EFC7, #AFFFA9)
