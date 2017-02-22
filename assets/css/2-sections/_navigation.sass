@@ -1,0 +1,213 @@
+.menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 68px
+  padding-left: 30px
+  padding-right: 30px
+  padding-top: 20px
+  padding-bottom: 20px
+  position: relative
+  z-index: 500
+  max-width: 1676px
+  margin-left: auto
+  margin-right: auto
+
+@media only screen and (min-width: 769px)
+  .menu
+    padding-top: 30px
+
+
+
+.brand
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+
+
+.brand-logo
+  height: 40px
+
+
+.brand-name
+  margin-left: 15px
+  font-size: 11px
+  font-weight: 600
+  color: #fff
+  letter-spacing: 3px
+
+
+@media only screen and (max-width: 768px)
+  .brand-name
+    display: none
+
+
+
+
+.menu-toggle
+  position: relative
+  width: 40px
+  height: 32px
+  text-indent: -9999em
+  z-index: 1100
+
+
+@media only screen and (min-width: 769px)
+  .menu-toggle
+    display: none
+
+
+
+.menu-toggle span
+  background-color: #fff
+  display: block
+  position: absolute
+  transition: all 0.2s ease-in-out
+  top: 14px
+  left: 10px
+  width: 18px
+  height: 2px
+
+
+.menu-toggle span:first-child
+  transform-origin: 50% 0
+  top: 9px
+  z-index: 10
+
+
+.menu-toggle span:last-child
+  transform-origin: 50% 100%
+  top: 19px
+  z-index: 10
+
+@media only screen and (max-width: 768px)
+  .menu-overlay
+    background-color: #409CF9
+    background-image: linear-gradient(to bottom, #409CF9, #37F6E0)
+    background-color: rgba(255, 255, 255, 0.95)
+    opacity: 0
+    overflow-x: hidden
+    overflow-y: auto
+    position: fixed
+    text-align: center
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    visibility: hidden
+    width: 100%
+    height: 100%
+
+@media only screen and (max-width: 768px)
+  .menu-links
+    list-style: none
+    margin: 110px 0 60px
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out
+    transform: scale(1.1)
+    opacity: 0
+
+@media only screen and (min-width: 769px)
+  .menu-links
+    display: flex
+    list-style: none
+
+.logo
+  height: 60px
+  background: url('/assets/img/logo.svg') no-repeat center center
+
+.menu-overlay-brand
+  margin-bottom: 25px
+
+
+@media only screen and (min-width: 769px)
+  .menu-overlay-brand
+      display: none
+
+
+
+.menu-link
+  font-weight: 600
+  color: #fff
+  display: inline-block
+  font-size: 20px
+  letter-spacing: 7px
+  padding: 20px
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+
+
+.menu-link::before
+  top: 90%
+  left: 0
+  right: 0
+  margin: 0 auto
+  position: absolute
+  background: #fff
+  content: ""
+  display: block
+  height: 2px
+  width: 0%
+  transition: width 0.1s ease-out
+
+.active.menu-link::before
+  width: 100%
+
+@media only screen and (min-width: 769px)
+  .menu-link
+    font-size: 11px
+    padding: 0
+    letter-spacing: 3px
+
+  .menu-link::before
+    margin-top: 25px
+    top: 0
+    position: absolute
+    background: #fff
+    content: ""
+    display: block
+    height: 2px
+    width: 0%
+    transition: width 0.1s ease-out
+
+  .menu-link:hover::before
+    width: 100%
+
+@media only screen and (min-width: 769px)
+  .menu-item
+    margin-right: 10px
+    margin-left: 10px
+
+  .menu-item:nth-child(2)
+    margin-left: 0
+
+  .menu-item:last-child
+    margin-right: 0
+
+// Toogle Animations
+
+.menu.menu-overlay-active .menu-toggle span
+  background-color: transparent
+  transform: scale(0.5)
+
+
+.menu.menu-overlay-active .menu-toggle span:first-child
+  background-color: #fff
+  transform: translateY(6px) translateX(1px) rotate(45deg)
+
+
+.menu.menu-overlay-active .menu-toggle span:last-child
+  background-color: #fff
+  transform: translateY(-5px) translateX(1px) rotate(-45deg)
+
+
+.menu.menu-overlay-active .menu-overlay
+  opacity: 1
+  visibility: visible
+
+
+.menu.menu-overlay-active .menu-links
+  opacity: 1
+  transform: scale(1)

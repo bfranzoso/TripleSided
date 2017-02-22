@@ -1,0 +1,61 @@
+*
+  margin: 0
+  padding: 0
+
+
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+
+html, body
+  font-family: "macho",sans-serif
+  animation: fadein 1s
+  background: #fff
+
+.home
+  background: #F7F7F7
+
+.eyebrow
+  font-size: 11px
+  letter-spacing: 4px
+  text-transform: uppercase
+  margin-bottom: 40px
+  padding-bottom: 20px
+  position: relative
+  text-align: center
+
+
+.eyebrow::after
+  left: 0
+  right: 0
+  margin: 0 auto
+  position: absolute
+  background-color: #409CF9
+  background-image: linear-gradient(to left, #409CF9, #37F6E0)
+  content: ""
+  width: 24px
+  height: 2px
+  bottom: 0
+
+
+@media only screen and (min-width: 769px)
+  .eyebrow
+      margin-bottom: 60px
+
+.container
+  max-width: 1280px
+  margin-left: auto
+  margin-right: auto
+  padding: 0 30px
+  position: relative
+
+
+.container.large
+  max-width: 1676px
+
+
+.container.no-padding
+  padding: 0

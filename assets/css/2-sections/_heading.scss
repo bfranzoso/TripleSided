@@ -1,0 +1,38 @@
+.heading {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.heading-title {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 769px) {
+  .heading-title {
+    font-size: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+#services .heading-title {
+  color: #8F8F8F;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 769px) {
+    #services .heading {
+      width: 80%;
+      margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    #services .heading {
+      width: 70%;
+      margin: 0 auto;
+    }
+}

@@ -1,0 +1,36 @@
+.capabilities {
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 769px) {
+  .capabilities {
+    width: 49.15254%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.capability-icon {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.capability-title {
+  color: #000;
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.capability-desc {
+  font-weight: normal;
+  color: #8F8F8F;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 0 100px;
+}
+
+.capability-desc:last-child {
+  margin: 0;
+}

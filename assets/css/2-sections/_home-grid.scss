@@ -1,0 +1,223 @@
+.flex-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.flex-wrapper {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+}
+
+/*@media only screen and (max-width: 1440px) {
+  .flex-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}*/
+
+.left {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .left {
+    width: 48%;
+  }
+}
+
+.right {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .right {
+    width: 48%;
+  }
+}
+
+.tile-wrapper {
+  margin-bottom: 60px;
+}
+
+/*.tile-wrapper {
+    padding: 0 15px 15px;
+}
+
+@media only screen and (min-width: 568px) {
+    .tile-wrapper {
+        padding: 0 2.5731vw 5.1462vw;
+    }
+}
+
+@media only screen and (min-width: 1710px) {
+    .tile-wrapper {
+        padding: 0 44px 88px;
+    }
+}
+
+.tile-wrapper:last-child {
+    padding-bottom: 0;
+}*/
+
+.tile {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1710px) {
+  .tile {
+    height: 902px;
+  }
+}
+
+
+.tile-details {
+  padding: 5.1462vw;
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-details {
+    padding: 7.48538vw;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1710px) {
+  .tile-details {
+    padding: 88px;
+    padding-bottom: 0;
+  }
+}
+
+.tile-client {
+  margin-bottom: 2.80702vw;
+  color: #fff;
+  position: relative;
+}
+
+@media only screen and (max-width: 568px) {
+  .tile-client {
+    margin-bottom: 18px;
+  }
+}
+
+@media only screen and (min-width: 1710px) {
+  .tile-client {
+    margin-bottom: 48px
+  }
+}
+
+.tile-client  {
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 568px) {
+  .tile-client  {
+    font-size: 24px;
+  }
+}
+
+.tile-desc {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media only screen and (min-width: 1024px) {
+  .tile-desc {
+    font-size: 20px;
+  }
+}
+
+.tile-desc p {
+  margin: 0;
+  padding-bottom: 5.1462vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-desc p {
+    padding-bottom: 7.48538vw;
+  }
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+.tile-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .tile-image {
+        max-width: 750px;
+    }
+}
+
+@media only screen and (min-width: 1710px) {
+    .tile-wrapper.mini .tile {
+        height: 380px
+    }
+}
+
+.mini p {
+  color: #18171F
+}
+
+.mini h3 {
+  color: #18171F;
+}
+
+
+
+
+
+.nest {
+  background-image: linear-gradient(to bottom right, #95A0A9, #B3B8C8);
+}
+
+.equinox {
+  background: linear-gradient(to bottom right, #0A0A0A, #565656);
+}
+
+.other {
+  background: linear-gradient(to bottom right, #513F9D, #A25DBE);
+}
+
+.paypal {
+  background: linear-gradient(to bottom right, #06D09E, #03CEC3);
+}
+
+.google {
+  border-top: 5px solid #FC584E;
+}
+
+.wyndam {
+  border-top: 5px solid #0089FF;
+}
+
+.cornel {
+  border-top: 5px solid #18171F;
+}
+
+.stubhub {
+  border-top: 5px solid #ED2A5F;
+}
