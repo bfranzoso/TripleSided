@@ -104,11 +104,6 @@ a:focus .post-title {
   }
 }
 
-.posts-actions {
-  display: flex;
-  justify-content: center;
-}
-
 .button {
   margin: 10px;
   padding: 16px 48px;
@@ -140,4 +135,11 @@ a:focus .post-title {
 .button:hover:after {
   width: 100%;
   left: 0;
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }

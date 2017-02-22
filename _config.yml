@@ -1,5 +1,4 @@
 name: Ben Franzoso
-markdown: redcarpet
 exclude: ["node_modules",
   "gulpfile.js",
   "package.json",
@@ -7,6 +6,12 @@ exclude: ["node_modules",
   "README.md"]
 
 url: "http://www.triple-sided.com"
-permalink: /:categories/:title/
 
-# Files
+gems:
+  - jekyll-paginate-v2
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 1
+  permalink: '/page/:num/'

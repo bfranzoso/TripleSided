@@ -2,91 +2,38 @@
   <section class="blog">
     <div class="row">
       <div class="container">
-        <div class="posts">
-          <div class="post">
-            <a href="#">
-              <div class="post-details">
-                <div class="post-avatar">
-                  <img src="/assets/other/ben.jpg" alt="Ben Franzoso">
+        <ul class="posts">
+          {% for posts in paginator.posts %}
+          <li>
+            <article class="post">
+              <a href="{{ posts.url }}">
+                <div class="post-details">
+                  <div class="post-avatar">
+                    <img src="/assets/img/{{ posts.thumbnail }}.jpg" alt="{{ posts.author }}">
+                  </div>
+                  <div class="post-byline">
+                    Feb 18
+                    ·
+                    {{ posts.author }}
+                  </div>
                 </div>
-                <div class="post-byline">
-                  Feb 17
-                  ·
-                  Ben Franzoso
-                </div>
-              </div>
-              <h2 class="post-title">Proudly Built with Jekyll</h2>
-              <p class="post-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </a>
-          </div>
-          <div class="post">
-            <a href="#">
-              <div class="post-details">
-                <div class="post-avatar">
-                  <img src="/assets/other/max.jpg" alt="Max Lighthall">
-                </div>
-                <div class="post-byline">
-                  Feb 17
-                  ·
-                  Max Lighthall
-                </div>
-              </div>
-              <h2 class="post-title">Proudly Built with Jekyll</h2>
-              <p class="post-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </a>
-          </div>
-          <div class="post">
-            <a href="#">
-              <div class="post-details">
-                <div class="post-avatar">
-                  <img src="/assets/other/ben.jpg" alt="Ben Franzoso">
-                </div>
-                <div class="post-byline">
-                  Feb 17
-                  ·
-                  Ben Franzoso
-                </div>
-              </div>
-              <h2 class="post-title">Proudly Built with Jekyll</h2>
-              <p class="post-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </a>
-          </div>
-          <div class="post">
-            <a href="#">
-              <div class="post-details">
-                <div class="post-avatar">
-                  <img src="/assets/other/ben.jpg" alt="Ben Franzoso">
-                </div>
-                <div class="post-byline">
-                  Feb 17
-                  ·
-                  Ben Franzoso
-                </div>
-              </div>
-              <h2 class="post-title">Proudly Built with Jekyll</h2>
-              <p class="post-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </a>
-          </div>
-          <div class="post">
-            <a href="#">
-              <div class="post-details">
-                <div class="post-avatar">
-                  <img src="/assets/other/ben.jpg" alt="Ben Franzoso">
-                </div>
-                <div class="post-byline">
-                  Feb 17
-                  ·
-                  Ben Franzoso
-                </div>
-              </div>
-              <h2 class="post-title">Proudly Built with Jekyll</h2>
-              <p class="post-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </a>
-          </div>
-          <div class='posts-actions'>
-          <a href="#" class="button" data-remote="true" rel="next">More</a>
-          </div>
+                <h2 class="post-title">{{ posts.title }}</h2>
+                <p class="post-excerpt">{{ posts.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+              </a>
+            </article>
+          </li>
+          {% endfor %}
+        </ul>
+        {% if paginator.total_pages > 1 %}
+        <div class="pager">
+          {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" rel="next">Back</a>
+          {% endif %}
+          {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" rel="next">More</a>
+          {% endif %}
         </div>
+        {% endif %}
       </div>
     </div>
   </section>
