@@ -7,6 +7,7 @@ exclude: ["node_modules",
 url: "http://www.triple-sided.com"
 
 gems: [jekyll-paginate-v2]
+baseurl: /
 permalink: /:categories/:title/
 
 pagination:

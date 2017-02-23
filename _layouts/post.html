@@ -2,7 +2,45 @@
 layout: default
 ---
 
-<div class="theme-clear">
-   {% include navigation.html %}
-   {{ content }}
+<div class="blog-post theme-clear">
+  <div class="gradient-bar"></div>
+  {% include navigation.html %}
+  <main>
+    <div class="row post">
+      <div class="container">
+        <article>
+          <header class="post-header with-marquee">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-byline">
+             <time datetime="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+           </div>
+            <div class="post-marquee">
+              <img alt="" src="https://s3.amazonaws.com/freeassociation.production/uploads/post/marquee/86/FoST_2x.jpg">
+            </div>
+            <div class="post-details">
+              <div class="post-avatar">
+                <img alt="" src="/assets/img/{{ page.thumbnail }}.jpg">
+              </div>
+              <div class="post-byline">{{ page.author }}</div>
+            </div>
+          </header>
+          <div class="post-content">{{ content }}</div>
+        </article>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <h4 class="eyebrow">Up Next</h4>
+        {% if content and page.related %}
+          <ul class="next-post">
+          {% for post in site.posts %}
+            {% if page.related contains post.title %}
+              <li><a class="post-title next-post-title" href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </main>
 </div>
