@@ -1,12 +1,50 @@
 ---
-layout: default
+layout: blog
+title: Blog
 logo: logo2
-pagination:
-  enabled: true
 ---
-
 <div class="theme-clear">
   <div class="gradient-bar"></div>
   {% include navigation.html %}
-  {% include blog.html %}
+
+  <main>
+    <section class="blog">
+      <div class="row">
+        <div class="container">
+          <ul class="posts">
+            {% for posts in site.posts %}
+            <li>
+              <article class="post">
+                <a href="{{ posts.url }}">
+                  <div class="post-details">
+                    <div class="post-avatar">
+                      <img src="/assets/img/{{ posts.thumbnail }}.jpg" alt="{{ posts.author }}">
+                    </div>
+                    <div class="post-byline">
+                      {{ posts.date | date: "%B %-d" }}
+                      ·
+                      {{ posts.author }}
+                    </div>
+                  </div>
+                  <h2 class="post-title">{{ posts.title }}</h2>
+                  <p class="post-excerpt">{{ posts.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+                </a>
+              </article>
+            </li>
+            {% endfor %}
+          </ul>
+          {% if paginator.total_pages > 1 %}
+          <div class="pager">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" rel="next">Back</a>
+            {% endif %}
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" rel="next">More</a>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+  </main>
 </div>
