@@ -1135,7 +1135,7 @@ a:focus .post-title {
     padding-right: 15.25424%; } }
 
 .post-details {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   text-align: center;
   position: relative; }
 
@@ -1153,7 +1153,8 @@ a:focus .post-title {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #6F6F6F; }
+  color: #6F6F6F;
+  margin-bottom: 20px; }
 
 @media only screen and (max-width: 768px) {
   .post-byline {
@@ -1180,6 +1181,7 @@ a:focus .post-title {
 .post-excerpt {
   font-weight: 300;
   font-size: 18px;
+  font-weight: 300;
   line-height: 1.7;
   color: #6F6F6F;
   margin: 0; }
