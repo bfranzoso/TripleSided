@@ -17,16 +17,31 @@
         <div class="logo"></div>
       </li>
       <li class="menu-item">
+      {% if page.active == "work" %}
         <a class="active menu-link" href="/">Work</a>
-      </li>
+      {% else %}
+        <a class="menu-link" href="/">Work</a>
+      {% endif %}
       <li class="menu-item">
+      {% if page.active == "services" %}
+        <a class="active menu-link" href="/services">Services</a>
+      {% else %}
         <a class="menu-link" href="/services">Services</a>
+      {% endif %}
       </li>
       <li class="menu-item">
+      {% if page.active == "blog" %}
+        <a class="active menu-link" href="/blog">Blog</a>
+      {% else %}
         <a class="menu-link" href="/blog">Blog</a>
+      {% endif %}
       </li>
       <li class="menu-item">
-        <a class="menu-link" href="#">Contact</a>
+      {% if page.active == "contact" %}
+        <a class="active menu-link" href="/contact">Contact</a>
+      {% else %}
+        <a class="menu-link" href="/contact">Contact</a>
+      {% endif %}
       </li>
     </ul>
   </div>
