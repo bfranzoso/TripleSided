@@ -1,19 +1,4 @@
----
-layout: default
-active: work
-title: bitch
-logo: logo
-h1-size: large
-h1-text: Small<br>Business<br>Promotion
-header-color: theme-purple
----
-
-<div class="home">
-
-  {% include navigation.html %}
-  {% include header.html %}
-  {% include home-grid.html %}
-  <footer class="footer grey">
+  <footer class="footer">
     <div class="container">
       <div class="footer-contacts">
         <div class="footer-contact">
@@ -29,7 +14,7 @@ header-color: theme-purple
           <a href="#" title="We'd love to talk">+1 (603) 918-3420</a>
         </div>
       </div>
-      <div class="footer-social theme-purple">
+      <div class="footer-social {{ page.social-theme }}">
         <a href="#" title="facebook">
           <i class="fa fa-facebook"></i>
         </a>
@@ -45,6 +30,3 @@ header-color: theme-purple
       </div>
     </div>
   </footer>
-
-  <div class="gradient-bar theme-purple"></div>
-</div>
