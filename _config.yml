@@ -2,13 +2,19 @@ exclude: ["node_modules",
   "gulpfile.js",
   "package.json",
   "preview.jpg",
-  "README.md"]
+  "README.md",
+  "s3_website.yml"]
 
 url: "http://www.triple-sided.com"
 
 gems: [jekyll-paginate-v2]
 baseurl: /
 permalink: /:categories/:title/
+
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
 
 pagination:
 

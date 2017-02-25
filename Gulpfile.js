@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+var htmlmin     = require('gulp-htmlmin');
 var cp          = require('child_process');
 
 var messages = {
@@ -58,14 +59,12 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
 });
 
-/*
-* Travis is trying to Gulp stuff
-*/
 
 
 /**
@@ -76,7 +75,6 @@ gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch('assets/js/**', ['jekyll-rebuild']);
     gulp.watch(['*/*.html', '**/*.html', 'index.html', '_layouts/*.html', '_includes/*', '_posts/*'], ['jekyll-rebuild']);
-    gulp.watch(['assets/js/**'], ['jekyll-rebuild']);
 });
 
 
